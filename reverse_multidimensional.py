@@ -26,13 +26,11 @@ def reverse_list(arr):
     left = 0
     right = len(arr) - 1
     while left < right:
-        temp = arr[left]
-        arr[left] = arr[right]
-        arr[right] = temp
+        arr[left], arr[right] = arr[right], arr[left]
         left += 1
         right -= 1
     return arr
 
 # Print output
-# print(f"Given array: {arr}")
-# print(f"Reversed array: {reverse_main(arr)}")
+print(f"Given array: {arr}")
+print(f"Reversed array: {reverse_main(arr)}")
